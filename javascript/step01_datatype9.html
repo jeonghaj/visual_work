@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step01_datatype9.html</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+    <p>
+        <strong>function</strong>type 의 영역(scope)
+    </p>
+    <script>
+        /*
+        페이지 로딩 시점에 실행되는 이영역은 global 영역(전역) 입니다.
+        global 영역에 정의된 자원들은 어디에서나 사용 가능합니다.
+        */
+       let myName = "김구라";
+
+       function test(){
+        //함수의 중괄호 암에 속한 이영역은 local 영역 입니다.
+        //local 영역안에 정의된 자원은 해당 local 영역 안에서만 사용할수 있습니다.
+        let yourName="해골"
+        console.log(yourName)
+       }
+
+       function test2(){
+        //local 영역 안에서 바깥 영역의 변수 참조가능
+        console.log(myName)
+       }
+
+       let list = [2,4,6,8,9,10]
+       let hi = "안녕"
+       
+       function test3(a){
+        console.log(list[a]+`   안녕`);
+       }
+       //(괄호) 안에서 숫자 + 문자 표현 방식 + 기호로 사용
+       
+    </script>
+</body>
+</html>

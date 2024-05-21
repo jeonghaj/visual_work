@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step01_example.html</title>  
+    <style>
+        p { 
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputText">  
+    <button onclick="send()">전송</button>
+    <button id="sendBtn">전송2</button>
+    <p id="result">xxx</p>
+    <script>
+        // .addEventListener(이벤트명, callback 함수)
+            document.querySelector("#sendBtn").addEventListener("click",()=>{
+            let msg = document.querySelector("#inputText").value;
+            document.querySelector("#result").innerText = msg;
+        });
+
+
+        function send(){
+            //1. input 요소에 입력한 value 값을 읽어와서 변수에 담는다.
+            let msg = document.querySelector("#inputText").value;
+            //2. 변수에 담긴 문자열을 p 요소의 innerText로 넣어준다.
+            document.querySelector("#result").innerText = msg;
+
+
+       }
+
+    let sample = function(){
+        console.log("sample")
+    };
+    function sample1(){
+        console.log("sample01")
+    };
+    let sample2 = () => {
+        console.log("00")
+    };
+    function test(){
+        console.log("test() 호출됨")
+    }
+    let a = test();
+    let b = test;
+
+    function my(num){
+        console.log("mymy");
+        return 120+num;
+    }
+
+    </script>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

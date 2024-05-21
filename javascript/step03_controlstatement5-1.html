@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>응원할 나라를 고르시오</h1>
+    <select id="sel">
+    <option value="0">한국</option>
+    <option value="1">일본</option>
+    <option value="2">중국</option>
+    <option value="3">미국</option>
+    <option value="4">프랑스</option>
+
+</select>
+<button id="pick">확인</button>
+<p></p><strong id="result">xxx</strong>을 선택하셨습니다.</p>
+
+<script>
+    document.querySelector("#pick").addEventListener("click",function() {
+
+        let men = Number(document.querySelector("#sel").value)
+        switch(men){
+            case 0 : 
+              document.querySelector("#result").innerText  = "한국을 선택하셨습니다."
+              break;
+            case 1 : 
+              document.querySelector("#result").innerText  = "일본을 선택하셨습니다."
+              break;
+            case 2 : 
+              document.querySelector("#result").innerText  = "중국을 선택하셨습니다."
+              break;
+        }
+
+
+
+    })
+</script>
+</body>
+</html>

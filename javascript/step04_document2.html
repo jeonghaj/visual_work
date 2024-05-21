@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step04_document2.html</title>
+    <style>
+        /* 클래스명이 box인 요소에 적용할 css */
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: yellow;
+            transition: margin-left 1s linear;
+        }
+    </style>
+</head>
+<body>
+    <button id="moveBtn">움직이기</button>
+    <div class="box">박스</div>
+    
+    <script>
+        document.querySelector("#moveBtn").addEventListener("click",function(){
+            document.querySelector(".box").style.marginLeft = "100px";
+        })
+    </script>
+
+
+</table>
+    
+</body>
+</html>
