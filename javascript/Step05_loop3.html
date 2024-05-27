@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>while문 테스트</h1>
+        <button id="startBtn">반복시작</button>
+        <buttom id="stratBtn2">반복시작2</buttom>
+        <button id="startBtn3">반복시작3</button>
+        <script>
+            document.querySelector("#startBtn").addEventListener("click",()=>{
+                let count=0;
+                while(true){
+                    consol.log(count);
+                    count++;
+                    if(count == 10){
+                        break;
+                    }
+                document.querySelector("#startBtn2").addEventListener("click",()=>{
+                    console.log(count)
+                    count++
+                })
+            
+            
+                }
+            
+            })
+        </script>
+    </div>
+</body>
+</html>
