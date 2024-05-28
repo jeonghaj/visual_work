@@ -14,7 +14,27 @@
 <body>
     <div class="contianer">
         <h1>문서요소를 필요한 시점에 만들어서 원하는 위치에 넣기</h1>
-    </div>
+        <input type="text" placeholder="할일 입력..." id="inputTodo">
+        <button id="addBtn">추가하기</button>
+        <ol id="myList">
+            
+        </ol>
+     </div>
+        <script>
+            //추가하기 버튼을 눌렀을 때 실행할 함수 등록
+            document.querySelector("#addBtn").addEventListener("click",()=>{
+                //1. li 요소 만들기
+                const newLi = document.createElement("li")
+                //2. 입력한 문자열 읽어오기
+                const toDo = document.querySelector("#inputTodo").value
+                //3.li 요소의 innerText 로 읽어온 문자열 출력하기
+                newLi.innerText = toDo;
+                //4. ol 의 자식 요소로 li 요소를 추가하기
+                document.querySelector("ol").append(newLi);
+            })
+            
+        </script>
+   
     
 </body>
 </html>
