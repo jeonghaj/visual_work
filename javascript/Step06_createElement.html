@@ -16,11 +16,56 @@
         <h1>문서요소를 필요한 시점에 만들어서 원하는 위치에 넣기</h1>
         <input type="text" placeholder="할일 입력..." id="inputTodo">
         <button id="addBtn">추가하기</button>
-        <ol id="myList">
+        <button id="addBtn2">추가하기2</button>
+        <button id="addBtn3">추가하기3</button>
+        <button id="addBtn4">추가하기4</button>
+        <button id="addBtn5">추가하기5</button>
+        <ol>
             
         </ol>
      </div>
         <script>
+                  //추가하기5 버튼을 눌렀을 때 실행할 함수 등록
+            document.querySelector("#addBtn5").addEventListener("click",()=>{
+                const msg = document.querySelector("#inputTodo").value;
+                const html = `<li>${msg}</li>`;
+                //기존에 존재하는 요소를 덮어쓰기 하면서 추가(실제 요소가 만들어진다)
+                //덮어쓰기때문에 1개만 출력됨
+                document.querySelector("ol").innerText = html;
+            })
+                  //추가하기4 버튼을 눌렀을 때 실행할 함수 등록
+            document.querySelector("#addBtn4").addEventListener("click",()=>{
+                const msg = document.querySelector("#inputTodo").value;
+                const html = `<li>${msg}</li>`;
+                //기존에 존재하는 요소를 덮어쓰기 하면서 추가(실제 요소가 만들어진다)
+                //덮어쓰기때문에 1개만 출력됨
+                document.querySelector("ol").innerHTML = html;
+            })
+
+
+
+            //추가하기3 버튼을 눌렀을 때 실행할 함수 등록
+            document.querySelector("#addBtn3").addEventListener("click",()=>{
+                const msg = document.querySelector("#inputTodo").value;
+                // const html="<li>"+msg+"<li>";
+                const html = `<li>${msg}</li>`;
+                // .inscetAdjacentHTML("추가할위치", 추가할요소)
+                // 문자열을 해석해서 구조에 맞게끔 구성을 해준다.
+                document.querySelector("ol").insertAdjacentHTML("beforeend", html);
+            })
+
+
+             //추가하기2 버튼을 눌렀을 때 실행할 함수 등록
+             document.querySelector("#addBtn2").addEventListener("click",()=>{
+                const line = document.createElement("li");
+                line.innerText = document.querySelector("#inputTodo").value;
+                // .insertAdjacentElement("추가할위치",추가할요소)
+                //  beforbegin, afterbegin, beforeend, afterend 4가지 위치
+                document.querySelector("ol").insertAdjacentElement("afterbegin",line);
+            })
+            
+
+
             //추가하기 버튼을 눌렀을 때 실행할 함수 등록
             document.querySelector("#addBtn").addEventListener("click",()=>{
                 //1. li 요소 만들기
